@@ -20,7 +20,10 @@
 	  (scroll-bar-mode -1)))
 
 ;; Start the emacs-server for quick startup when using emacsclient
-(server-start)
+;; (server-start)
+(require 'server)
+(or (server-running-p)
+    (server-start))
 
 ;; Some sane defaults for tabs and column width
 (setq-default tab-width 4)
