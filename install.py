@@ -61,6 +61,7 @@ links = {
 	'git-untrack-ignored': 'bin/git-untracked-ignored',
 
 	'gdbinit': '.gdbinit',
+    'awesome': '.config/awesome/rc.lua'
 }
 
 scriptdir = os.path.dirname(os.path.realpath(__file__))
@@ -134,7 +135,7 @@ def install(file, force=False):
 	# If needed, create the directory this file resides in
 	if not os.path.exists(path):
 		os.makedirs(path)
-	# unlike exists, lexists will return true for broken symlinks 
+	# unlike exists, lexists will return true for broken symlinks
 	if os.path.lexists(dest):
 		if force:
 			# Remove the destination if it exists
